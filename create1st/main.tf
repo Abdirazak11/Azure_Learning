@@ -11,5 +11,5 @@ provider "local" {}
 
 resource "local_file" "hello" {
   filename = "hello.txt"
-  content  = "Hello, Terraform 👋"
+  content  = "Hello, Good night Terra 👋"
 }
