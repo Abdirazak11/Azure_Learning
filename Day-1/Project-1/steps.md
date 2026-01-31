@@ -1,30 +1,68 @@
-Create a directory for your Terraform project and create a Terraform configuration file (usually named main.tf) in that directory. In this file, you define the AWS provider and resources you want to create. Here's a basic example:
+<h2>Terraform Project Setup (AWS Example)</h2>
 
-   provider "aws" {
-     region = "us-east-1"  # Set your desired AWS region
-   }
+<h3>Create a Terraform Project Directory</h3>
+<p>
+Create a directory for your Terraform project and add a Terraform configuration file
+(usually named <code>main.tf</code>). This file defines the AWS provider and the resources
+you want to create.
+</p>
 
-   resource "aws_instance" "example" {
-     ami           = "ami-0c55b159cbfafe1f0"  # Specify an appropriate AMI ID
-     instance_type = "t2.micro"
-   }
-Initialize Terraform**
-In your terminal, navigate to the directory containing your Terraform configuration files and run:
+<h3>Example Terraform Configuration</h3>
 
-terraform init
-This command initializes the Terraform working directory, downloading any necessary provider plugins.
+<pre><code>provider "aws" {
+  region = "us-east-1"  # Set your desired AWS region
+}
 
-Apply the Configuration
-Run the following command to create the AWS resources defined in your Terraform configuration:
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"  # Specify an appropriate AMI ID
+  instance_type = "t2.micro"
+}
+</code></pre>
 
-terraform apply
-Terraform will display a plan of the changes it's going to make. Review the plan and type "yes" when prompted to apply it.
+<h3>Initialize Terraform</h3>
+<p>
+Navigate to the directory containing your Terraform configuration files and run:
+</p>
 
-Verify Resources
-After Terraform completes the provisioning process, you can verify the resources created in the AWS Management Console or by using AWS CLI commands.
+<pre><code>terraform init
+</code></pre>
 
-Destroy Resources
-If you want to remove the resources created by Terraform, you can use the following command:
+<p>
+This command initializes the Terraform working directory and downloads the required
+provider plugins.
+</p>
 
-terraform destroy
-Be cautious when using terraform destroy as it will delete resources as specified in your Terraform configuration.
+<h3>Apply the Configuration</h3>
+<p>
+Run the following command to create the AWS resources defined in your configuration:
+</p>
+
+<pre><code>terraform apply
+</code></pre>
+
+<p>
+Terraform will display an execution plan showing the changes it will make.
+Review the plan carefully and type <strong>yes</strong> when prompted.
+</p>
+
+<h3>Verify Resources</h3>
+<p>
+After Terraform completes provisioning, verify the created resources using:
+</p>
+<ul>
+  <li>The AWS Management Console</li>
+  <li>AWS CLI commands (e.g., <code>aws ec2 describe-instances</code>)</li>
+</ul>
+
+<h3>Destroy Resources</h3>
+<p>
+To remove all resources created by Terraform, run:
+</p>
+
+<pre><code>terraform destroy
+</code></pre>
+
+<p>
+<strong>⚠️ Warning:</strong> Use this command carefully, as it permanently deletes
+resources defined in your Terraform configuration.
+</p>
