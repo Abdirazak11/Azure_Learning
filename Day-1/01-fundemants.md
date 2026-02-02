@@ -1,35 +1,107 @@
-Infrastructure as Code(IaC)
-Before the advent of IaC, infrastructure management was typically a manual and time-consuming process. System administrators and operations teams had to:
+<h2>Infrastructure as Code (IaC)</h2>
 
-Manually Configure Servers: Servers and other infrastructure components were often set up and configured manually, which could lead to inconsistencies and errors.
+<p>
+Before the advent of Infrastructure as Code (IaC), infrastructure management was largely
+manual, time-consuming, and error-prone. System administrators and operations teams
+typically faced the following challenges:
+</p>
 
-Lack of Version Control: Infrastructure configurations were not typically version-controlled, making it difficult to track changes or revert to previous states.
+<h3>Challenges Before IaC</h3>
+<ul>
+  <li>
+    <strong>Manually Configure Servers:</strong>
+    Infrastructure components were set up manually, often leading to inconsistencies
+    and configuration errors.
+  </li>
+  <li>
+    <strong>Lack of Version Control:</strong>
+    Infrastructure configurations were rarely version-controlled, making it difficult
+    to track changes or roll back to previous states.
+  </li>
+  <li>
+    <strong>Documentation Heavy:</strong>
+    Teams relied on written documentation to record setup steps, which quickly became
+    outdated and unreliable.
+  </li>
+  <li>
+    <strong>Limited Automation:</strong>
+    Automation was restricted to basic scripts, lacking the flexibility and reliability
+    of modern IaC tools.
+  </li>
+  <li>
+    <strong>Slow Provisioning:</strong>
+    Creating new environments required multiple manual steps, delaying deployments and
+    project delivery.
+  </li>
+</ul>
 
-Documentation Heavy: Organizations relied heavily on documentation to record the steps and configurations required for different infrastructure setups. This documentation could become outdated quickly.
+<p>
+IaC addresses these challenges by introducing a systematic, automated, and code-driven
+approach to infrastructure management.
+</p>
 
-Limited Automation: Automation was limited to basic scripting, often lacking the robustness and flexibility offered by modern IaC tools.
+<p>
+Popular IaC tools include <strong>Terraform</strong>, <strong>AWS CloudFormation</strong>,
+<strong>Azure Resource Manager (ARM)</strong>, and others.
+</p>
 
-Slow Provisioning: Provisioning new resources or environments was a time-consuming process that involved multiple manual steps, leading to delays in project delivery.
+<p>
+These tools enable organizations to define, deploy, and manage infrastructure in a
+consistent and repeatable manner, making it easier to adapt to the dynamic needs of
+modern applications and services.
+</p>
 
-IaC addresses these challenges by providing a systematic, automated, and code-driven approach to infrastructure management. Popular IaC tools include Terraform, AWS CloudFormation, Azure Resource Manager templates others.
+<hr>
 
-These tools enable organizations to define, deploy, and manage their infrastructure efficiently and consistently, making it easier to adapt to the dynamic needs of modern applications and services.
+<h2>Why Terraform?</h2>
 
-Why Terraform ?
-There are multiple reasons why Terraform is used over the other IaC tools but below are the main reasons.
+<p>
+There are several reasons Terraform is widely adopted over other IaC tools. Some of the
+most important ones are listed below:
+</p>
 
-Multi-Cloud Support: Terraform is known for its multi-cloud support. It allows you to define infrastructure in a cloud-agnostic way, meaning you can use the same configuration code to provision resources on various cloud providers (AWS, Azure, Google Cloud, etc.) and even on-premises infrastructure. This flexibility can be beneficial if your organization uses multiple cloud providers or plans to migrate between them.
+<h3>Key Benefits of Terraform</h3>
 
-Large Ecosystem: Terraform has a vast ecosystem of providers and modules contributed by both HashiCorp (the company behind Terraform) and the community. This means you can find pre-built modules and configurations for a wide range of services and infrastructure components, saving you time and effort in writing custom configurations.
-
-Declarative Syntax: Terraform uses a declarative syntax, allowing you to specify the desired end-state of your infrastructure. This makes it easier to understand and maintain your code compared to imperative scripting languages.
-
-State Management: Terraform maintains a state file that tracks the current state of your infrastructure. This state file helps Terraform understand the differences between the desired and actual states of your infrastructure, enabling it to make informed decisions when you apply changes.
-
-Plan and Apply: Terraform's "plan" and "apply" workflow allows you to preview changes before applying them. This helps prevent unexpected modifications to your infrastructure and provides an opportunity to review and approve changes before they are implemented.
-
-Community Support: Terraform has a large and active user community, which means you can find answers to common questions, troubleshooting tips, and a wealth of documentation and tutorials online.
-
-Integration with Other Tools: Terraform can be integrated with other DevOps and automation tools, such as Docker, Kubernetes, Ansible, and Jenkins, allowing you to create comprehensive automation pipelines.
-
-HCL Language: Terraform uses HashiCorp Configuration Language (HCL), which is designed specifically for defining infrastructure. It's human-readable and expressive, making it easier for both developers and operators to work with.
+<ul>
+  <li>
+    <strong>Multi-Cloud Support:</strong>
+    Terraform enables cloud-agnostic infrastructure definitions, allowing the same code
+    to provision resources across AWS, Azure, Google Cloud, and even on-premises systems.
+    This flexibility is ideal for multi-cloud and migration strategies.
+  </li>
+  <li>
+    <strong>Large Ecosystem:</strong>
+    Terraform has a rich ecosystem of providers and reusable modules maintained by
+    HashiCorp and the community, significantly reducing development effort.
+  </li>
+  <li>
+    <strong>Declarative Syntax:</strong>
+    Terraform uses a declarative approach, where you define the desired end state of
+    infrastructure instead of writing step-by-step instructions.
+  </li>
+  <li>
+    <strong>State Management:</strong>
+    Terraform maintains a state file that tracks real-world infrastructure, allowing it
+    to detect differences between the desired and actual state and apply changes safely.
+  </li>
+  <li>
+    <strong>Plan and Apply Workflow:</strong>
+    Terraform’s <code>plan</code> and <code>apply</code> stages allow teams to preview
+    changes before execution, reducing the risk of unintended modifications.
+  </li>
+  <li>
+    <strong>Strong Community Support:</strong>
+    A large and active community provides extensive documentation, tutorials, and
+    troubleshooting resources.
+  </li>
+  <li>
+    <strong>Integration with Other Tools:</strong>
+    Terraform integrates seamlessly with tools like Docker, Kubernetes, Ansible, and
+    Jenkins, enabling complete DevOps automation pipelines.
+  </li>
+  <li>
+    <strong>HCL Language:</strong>
+    Terraform uses HashiCorp Configuration Language (HCL), which is human-readable,
+    expressive, and purpose-built for defining infrastructure.
+  </li>
+</ul>
