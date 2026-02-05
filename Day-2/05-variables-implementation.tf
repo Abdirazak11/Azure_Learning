@@ -1,6 +1,6 @@
 # Variables Demo
 
-```hcl
+
 
 # Define an input variable for the EC2 instance type
 
@@ -34,4 +34,3 @@ output "public_ip" {
   value       = aws_instance.example_instance.public_ip
 }
 
-```
