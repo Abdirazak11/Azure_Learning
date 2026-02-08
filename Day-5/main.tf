@@ -102,4 +102,5 @@ resource "aws_instance" "server" {
       "sudo python3 app.py &",
     ]
   }
+  
 }
